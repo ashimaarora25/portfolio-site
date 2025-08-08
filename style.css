@@ -75,9 +75,9 @@ footer {
 }
 
 .contact-icons a {
-  font-size: 24px;
+  font-size: 20px;
   color: #333;
-  margin-right: 15px;
+  margin-right: 25px;
   text-decoration: none;
   transition: color 0.3s ease;
 }
