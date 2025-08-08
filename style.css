@@ -5,6 +5,9 @@ body {
   background-color: #f5f7fa;
   color: #333;
 }
+profile-photo {
+  border-radius: 50%;
+}
 
 header {
   background-color: #0b5ed7;
