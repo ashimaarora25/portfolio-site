@@ -9,6 +9,7 @@ body {
    width: 150px;
     height: 150px;
     padding:10px;
+    margin-right: 20px;
     border-radius: 50%; /* makes image circular */
     object-fit: cover; /* crops image nicely */
     box-shadow: 0 0 8px rgba(0,0,0,0.15);
