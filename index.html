@@ -7,33 +7,43 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <style>
-    /* Accordion Styling */
+    /* Accordion Section Styling */
     .accordion {
-      background-color: #f4f4f4;
+      background-color: #fff;
       color: #333;
       cursor: pointer;
-      padding: 15px;
-      margin: 10px 0;
-      border: none;
+      padding: 18px 20px;
+      margin: 12px 0;
+      border: 1px solid #ddd;
+      border-radius: 12px;
       text-align: left;
       outline: none;
-      font-size: 18px;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-      border-radius: 8px;
-      width: 100%;
+      font-size: 20px;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
     }
     .accordion:hover {
-      background-color: #e0e0e0;
+      background-color: #f9f9f9;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+    .accordion i {
+      transition: transform 0.3s ease;
+    }
+    .accordion.active i {
+      transform: rotate(90deg);
     }
     .panel {
-      padding: 0 15px;
+      padding: 15px 20px;
       display: none;
       overflow: hidden;
-      background-color: #fff;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      margin-bottom: 10px;
+      background-color: #fafafa;
+      border-left: 3px solid #007bff;
+      border-radius: 0 0 12px 12px;
+      margin-bottom: 15px;
     }
     .project-card {
       padding: 10px;
@@ -43,9 +53,18 @@
     .project-card img {
       max-width: 100%;
       border-radius: 8px;
+      margin-top: 8px;
     }
     .project-card:last-child {
       border-bottom: none;
+    }
+    h2 {
+      margin-bottom: 10px;
+    }
+    .section-subtext {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 15px;
     }
   </style>
 </head>
@@ -57,37 +76,33 @@
 
   <section id="about">
     <h2>About Me</h2>
-    <img src="images/IMG_6761.jpeg" alt ="profile photo" class="profile-photo" align="left" style="margin: 0 20px 10px 0;"> 
-    <p>Hi, my name is Ashima. I am a Data Engineer with a Master’s degree in Computer Science, specializing in Machine Learning. My expertise lies in building and optimizing scalable data pipelines, integrating diverse data sources, and enabling analytics-ready datasets using big data technologies like Hadoop, Hive, and Spark (PySpark).
-      <br><br>
-      In my current role, I’ve led initiatives that improved data accessibility by 60%, reduced pipeline-related incidents by 50%, and boosted operational efficiency by 40% through automation and optimization. My experience spans both batch and near real-time architectures, cloud-based data solutions, and the use of Apache Kafka for high-throughput streaming.
-      <br><br>
-      With my academic background in ML, I’m now expanding into Machine Learning Engineering and MLOps — leveraging my data engineering foundation to develop, deploy, and maintain intelligent systems at scale. This portfolio is a curated collection of projects that demonstrate how I apply theory to practice, bridging the gap between raw data and impactful, data-driven solutions.
-    </p>
+    <img src="images/IMG_6761.jpeg" alt="profile photo" class="profile-photo" align="left" style="margin: 0 20px 10px 0;"> 
+    <p>Hi, my name is Ashima. I am a Data Engineer with a Master’s degree in Computer Science, specializing in Machine Learning...</p>
   </section>
 
   <section id="projects">
     <h2>Featured Projects</h2>
+    <p class="section-subtext">Click a section below to explore detailed project case studies:</p>
 
     <!-- Accordion for Data Engineering Projects -->
-    <button class="accordion">Data Engineering Projects</button>
+    <button class="accordion">Data Engineering Projects <i class="fa-solid fa-chevron-right"></i></button>
     <div class="panel">
       <div class="project-card">
         <h3>Daily Automated ETL Pipeline with Apache Airflow & PostgreSQL</h3>
-        <p>Designed and deployed a daily automated ETL pipeline that leverages Apache Airflow to orchestrate the ingestion and processing of Amazon book metadata...</p>
+        <p>Designed and deployed a daily automated ETL pipeline...</p>
         <img src="images/pipeline_design-2.png" alt="ETL Pipeline Design">
         <br><a href="https://github.com/ashimaarora25/bigdataprojects/tree/main/amazonbooksdata" target="_blank">View on GitHub</a>
       </div>
       <div class="project-card">
         <h3>Real-Time ETL Pipeline with Apache Kafka & AWS</h3>
-        <p>Designed and deployed an end-to-end ETL pipeline to simulate near real-time streaming data generation using Python...</p>
+        <p>Designed and deployed an end-to-end ETL pipeline...</p>
         <img src="images/Architecture.jpg" alt="Kafka Streaming Pipeline">
         <br><a href="https://github.com/ashimaarora25/bigdataprojects/tree/main/kafka-stockmarket" target="_blank">View on GitHub</a>
       </div>
     </div>
 
     <!-- Accordion for Machine Learning Projects -->
-    <button class="accordion">Machine Learning Projects</button>
+    <button class="accordion">Machine Learning Projects <i class="fa-solid fa-chevron-right"></i></button>
     <div class="panel">
       <div class="project-card">
         <h3>Predicting Health Insurance Charges</h3>
@@ -107,27 +122,15 @@
         <img src="images/food-classification-predictions.png" alt="Food Image Classification Results">
         <br><a href="https://github.com/ashimaarora25/ml-projects/blob/main/food-image-classification/FoodImageClassification.ipynb" target="_blank">View on GitHub</a>
       </div>
-      <div class="project-card">
-        <h3>Forecasting Energy Consumption and Prices</h3>
-        <p>Conducted a research project during my Master’s program focused on forecasting hourly energy consumption and prices...</p>
-        <img src="images/electricty_pred.png" alt="Electricity Forecasting Results">
-        <br><a href="https://drive.google.com/file/d/1Ic38WL7au5FvI5DoDPI6QPvVnAhKOmT2/view?usp=sharing" target="_blank">View Project Details</a>
-      </div>
     </div>
   </section>
 
   <section id="contact">
     <h2>Contact Me</h2>
     <div class="contact-icons">
-      <a href="mailto:ashimaarora63@gmail.com" aria-label="Email">
-        <i class="fa-solid fa-envelope"></i> ashimaarora63@gmail.com
-      </a><br>
-      <a href="https://www.linkedin.com/in/ashima-arora-" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <i class="fa-brands fa-linkedin"></i> https://www.linkedin.com/in/ashima-arora-
-      </a><br>
-      <a href="https://github.com/ashimaarora25" target="_blank" rel="noopener" aria-label="GitHub">
-        <i class="fa-brands fa-github"></i> https://github.com/ashimaarora25
-      </a>
+      <a href="mailto:ashimaarora63@gmail.com"><i class="fa-solid fa-envelope"></i> ashimaarora63@gmail.com</a><br>
+      <a href="https://www.linkedin.com/in/ashima-arora-" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a><br>
+      <a href="https://github.com/ashimaarora25" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
     </div>
   </section>
 
@@ -136,13 +139,21 @@
   </footer>
 
   <script>
-    // Accordion functionality
+    // Accordion functionality with smooth toggle + icon rotation
     const accordions = document.querySelectorAll(".accordion");
     accordions.forEach((accordion) => {
       accordion.addEventListener("click", function () {
         this.classList.toggle("active");
+        const icon = this.querySelector("i");
+        icon.classList.toggle("fa-chevron-right");
+        icon.classList.toggle("fa-chevron-down");
+
         const panel = this.nextElementSibling;
-        panel.style.display = panel.style.display === "block" ? "none" : "block";
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
       });
     });
   </script>
