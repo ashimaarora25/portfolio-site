@@ -6,6 +6,48 @@
   <title>My Data Engineering Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    /* Accordion Styling */
+    .accordion {
+      background-color: #f4f4f4;
+      color: #333;
+      cursor: pointer;
+      padding: 15px;
+      margin: 10px 0;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 18px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      border-radius: 8px;
+      width: 100%;
+    }
+    .accordion:hover {
+      background-color: #e0e0e0;
+    }
+    .panel {
+      padding: 0 15px;
+      display: none;
+      overflow: hidden;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .project-card {
+      padding: 10px;
+      margin: 15px 0;
+      border-bottom: 1px solid #ddd;
+    }
+    .project-card img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    .project-card:last-child {
+      border-bottom: none;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -15,90 +57,94 @@
 
   <section id="about">
     <h2>About Me</h2>
-    <img src="images/IMG_6761.jpeg" alt ="profile photo" class="profile-photo" align="left" HSPACE=”60” VSPACE=”30”> 
+    <img src="images/IMG_6761.jpeg" alt ="profile photo" class="profile-photo" align="left" style="margin: 0 20px 10px 0;"> 
     <p>Hi, my name is Ashima. I am a Data Engineer with a Master’s degree in Computer Science, specializing in Machine Learning. My expertise lies in building and optimizing scalable data pipelines, integrating diverse data sources, and enabling analytics-ready datasets using big data technologies like Hadoop, Hive, and Spark (PySpark).
-        <br>
+      <br><br>
       In my current role, I’ve led initiatives that improved data accessibility by 60%, reduced pipeline-related incidents by 50%, and boosted operational efficiency by 40% through automation and optimization. My experience spans both batch and near real-time architectures, cloud-based data solutions, and the use of Apache Kafka for high-throughput streaming.
-        <br>
-      With my academic background in ML, I’m now expanding into Machine Learning Engineering and MLOps — leveraging my data engineering foundation to develop, deploy, and maintain intelligent systems at scale. This portfolio is a curated collection of projects that demonstrate how I apply theory to practice, bridging the gap between raw data and impactful, data-driven solutions.</p>
+      <br><br>
+      With my academic background in ML, I’m now expanding into Machine Learning Engineering and MLOps — leveraging my data engineering foundation to develop, deploy, and maintain intelligent systems at scale. This portfolio is a curated collection of projects that demonstrate how I apply theory to practice, bridging the gap between raw data and impactful, data-driven solutions.
+    </p>
   </section>
-  
+
   <section id="projects">
     <h2>Featured Projects</h2>
-    <div class="project-card">
-      <h3> Daily Automated ETL Pipeline with Apache Airflow & PostgreSQL </h3>
-      <p> Designed and deployed a daily automated ETL pipeline that leverages Apache Airflow to orchestrate the ingestion and processing of Amazon book metadata. Python scripts handle data transformation before loading it into a PostgreSQL database. This setup fully automates the data ingestion, transformation, and storage process, enabling efficient management and querying of structured Amazon books data.</p>
-      <img src = "images/pipeline_design-2.png" width="730" height="400"> <br>
-      <a href="https://github.com/ashimaarora25/bigdataprojects/tree/main/amazonbooksdata" target="_blank">View on GitHub</a>
+
+    <!-- Accordion for Data Engineering Projects -->
+    <button class="accordion">Data Engineering Projects</button>
+    <div class="panel">
+      <div class="project-card">
+        <h3>Daily Automated ETL Pipeline with Apache Airflow & PostgreSQL</h3>
+        <p>Designed and deployed a daily automated ETL pipeline that leverages Apache Airflow to orchestrate the ingestion and processing of Amazon book metadata...</p>
+        <img src="images/pipeline_design-2.png" alt="ETL Pipeline Design">
+        <br><a href="https://github.com/ashimaarora25/bigdataprojects/tree/main/amazonbooksdata" target="_blank">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>Real-Time ETL Pipeline with Apache Kafka & AWS</h3>
+        <p>Designed and deployed an end-to-end ETL pipeline to simulate near real-time streaming data generation using Python...</p>
+        <img src="images/Architecture.jpg" alt="Kafka Streaming Pipeline">
+        <br><a href="https://github.com/ashimaarora25/bigdataprojects/tree/main/kafka-stockmarket" target="_blank">View on GitHub</a>
+      </div>
     </div>
-    <div class="project-card">
-      <h3> Real-Time ETL Pipeline with Apache Kafka & AWS </h3>
-      <p> Designed and deployed an end-to-end ETL pipeline to simulate near real-time streaming data generation using Python. Implemented Apache Kafka for data ingestion and processing, with Kafka Producers and Consumers publishing to and consuming from a Kafka Broker hosted on Amazon EC2. Processed data is stored in Amazon S3, where an AWS Glue Crawler catalogs the data. Using Amazon Athena, the cataloged data is queried and loaded into a SQL database for downstream analytics. This setup enables continuous, low-latency data ingestion, transformation, and analytics, supporting near real-time insights on stock market data.  </p>
-      <img src = "images/Architecture.jpg" alt ="Data pipeline for ingestion of streaming stock market data" width="730" height="400"> <br>
-      <a href="https://github.com/ashimaarora25/bigdataprojects/tree/main/kafka-stockmarket" target="_blank">View on GitHub</a>
+
+    <!-- Accordion for Machine Learning Projects -->
+    <button class="accordion">Machine Learning Projects</button>
+    <div class="panel">
+      <div class="project-card">
+        <h3>Predicting Health Insurance Charges</h3>
+        <p>Built a linear regression model to predict individual health insurance charges...</p>
+        <img src="images/PredictionCharges.png" alt="Health Insurance Prediction">
+        <br><a href="https://github.com/ashimaarora25/ml-projects/blob/main/health-insurance/HealthInsurancePredictions.ipynb" target="_blank">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>Sentiment Analysis on Amazon Alexa Reviews</h3>
+        <p>Performed sentiment analysis on customer reviews of Amazon’s Alexa products...</p>
+        <img src="images/WordCloudAmazon.png" alt="Amazon Alexa Reviews Word Cloud">
+        <br><a href="https://github.com/ashimaarora25/ml-projects/blob/main/amazon-sentiments/AmazonAlexaReviewsSentimentAnalysis.ipynb" target="_blank">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>Food Image Classification Using CNN</h3>
+        <p>Built and trained a Convolutional Neural Network (CNN) model using TensorFlow/Keras...</p>
+        <img src="images/food-classification-predictions.png" alt="Food Image Classification Results">
+        <br><a href="https://github.com/ashimaarora25/ml-projects/blob/main/food-image-classification/FoodImageClassification.ipynb" target="_blank">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>Forecasting Energy Consumption and Prices</h3>
+        <p>Conducted a research project during my Master’s program focused on forecasting hourly energy consumption and prices...</p>
+        <img src="images/electricty_pred.png" alt="Electricity Forecasting Results">
+        <br><a href="https://drive.google.com/file/d/1Ic38WL7au5FvI5DoDPI6QPvVnAhKOmT2/view?usp=sharing" target="_blank">View Project Details</a>
+      </div>
     </div>
   </section>
-
-  <section id="ml-projects">
-  <h2>Machine Learning Projects</h2>
-  <div class="project-card">
-    <h3> Predicting Health Insurance Charges Using Linear Regression and Random Forest Regressor </h3>
-    <p> Built a linear regression model to predict individual health insurance charges based on demographic and lifestyle factors such as age, sex, BMI, smoker status, 
-      and region. Applied data preprocessing (encoding categorical variables), exploratory data analysis (correlations, distributions), model training (Linear Regression and Random Forest Regressor), and model evaluation (R², MAE). </p>
-    <img src = "images/PredictionCharges.png" alt ="Visual representation of Predicted vs Actual Health Insurance Charges" width="700" height="450"> <br>
-    <a href="https://github.com/ashimaarora25/ml-projects/blob/main/health-insurance/HealthInsurancePredictions.ipynb" target="_blank">View on GitHub</a>
-  </div>
-    <div class="project-card">
-      <h3> Sentiment Analysis on Amazon Alexa Reviews Using Decision Tree, Random Forest, and XGBoost </h3>
-      <p> Performed sentiment analysis on customer reviews of Amazon’s Alexa products to classify feedback as positive or negative. Applied data preprocessing (text cleaning, tokenization, vectorization), exploratory data analysis (word frequencies, sentiment distributions), and trained machine learning models including Decision Trees, Random Forest, and XGBoost. Evaluated model performance using accuracy, confusion matrices, and classification metrics (precision, recall, F1-score) with cross-validation for robust results. </p>
-      <img src = "images/WordCloudAmazon.png" alt ="Visual representation of Word Cloud from Amazon Alexa Reviews" width="700" height="450"> <br>
-      <a href="https://github.com/ashimaarora25/ml-projects/blob/main/amazon-sentiments/AmazonAlexaReviewsSentimentAnalysis.ipynb" target="_blank">View on GitHub</a>
-  </div>
-    <div class="project-card">
-      <h3> Food Image Classification Using TensorFlow (Keras) Convolutional Neural Network </h3>
-      <p> Built and trained a Convolutional Neural Network (CNN) model using TensorFlow/Keras to classify food images into categories such as burgers, cheesecake, fries, taco, and pizza. Applied data augmentation during pre-processing and created training/validation datasets from labeled image directories. Conducted exploratory data analysis (class distributions, sample visualizations) and optimized the CNN architecture with regularization techniques such as dropout to reduce overfitting. Evaluated model performance using accuracy, and prediction probability visualizations on unseen test images. </p>
-      <img src = "images/food-classification-predictions.png" alt ="Visual representation of the results from food image classifications" width="700" height="450"> <br>
-      <a href="https://github.com/ashimaarora25/ml-projects/blob/main/food-image-classification/FoodImageClassification.ipynb" target="_blank">View on GitHub</a>
-  </div>
-    <div class="project-card">
-  <h3>Forecasting Energy Consumption and Prices Using Machine Learning</h3>
-  <p>
-    Conducted a research project during my Master’s program focused on forecasting hourly energy 
-    consumption and prices using a Kaggle dataset (2015–2019). Explored the influence of weather 
-    conditions and energy generation sources on electricity demand and price fluctuations. 
-    Implemented and compared multiple models including statistical time series models such as AutoRegressive Integrated Moving Average Model (ARIMA), and machine learning models such as Random Forests, Gradient Boosting, Recurrent Neural Networks, 
-    and LSTM networks, evaluating them on prediction accuracy and efficiency. 
-    This project highlighted the importance of feature selection, temporal dependencies, and 
-    model interpretability in energy forecasting.
-  </p>
-    <img src = "images/electricty_pred.png" width="700" height="450"> <br>
-  <a href="https://drive.google.com/file/d/1Ic38WL7au5FvI5DoDPI6QPvVnAhKOmT2/view?usp=sharing" target="_blank"> View Project Details</a>
-</div>
-</section>
-
-  
 
   <section id="contact">
     <h2>Contact Me</h2>
-     <div class="contact-icons">
-    <a href="mailto:ashimaarora63@gmail.com" aria-label="Email">
-    <i class="fa-solid fa-envelope"></i> ashimaarora63@gmail.com
-    </a>
-       <br>
-    <a href="https://www.linkedin.com/in/ashima-arora-" target="_blank" rel="noopener" aria-label="LinkedIn">
-    <i class="fa-brands fa-linkedin"></i> https://www.linkedin.com/in/ashima-arora-
-    </a>
-       <br>
-    <a href="https://github.com/ashimaarora25" target="_blank" rel="noopener" aria-label="GitHub">
-    <i class="fa-brands fa-github"></i> https://github.com/ashimaarora25
-    </a>
-  </div>
+    <div class="contact-icons">
+      <a href="mailto:ashimaarora63@gmail.com" aria-label="Email">
+        <i class="fa-solid fa-envelope"></i> ashimaarora63@gmail.com
+      </a><br>
+      <a href="https://www.linkedin.com/in/ashima-arora-" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin"></i> https://www.linkedin.com/in/ashima-arora-
+      </a><br>
+      <a href="https://github.com/ashimaarora25" target="_blank" rel="noopener" aria-label="GitHub">
+        <i class="fa-brands fa-github"></i> https://github.com/ashimaarora25
+      </a>
+    </div>
   </section>
-
-
 
   <footer>
     <p>&copy; 2025 Ashima Arora</p>
   </footer>
+
+  <script>
+    // Accordion functionality
+    const accordions = document.querySelectorAll(".accordion");
+    accordions.forEach((accordion) => {
+      accordion.addEventListener("click", function () {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
 </body>
 </html>
