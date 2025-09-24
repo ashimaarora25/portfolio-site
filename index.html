@@ -225,6 +225,11 @@ header.shrink .header-left .subtitle {
       font-size: 0.9rem;
       color: #555;
     }
+    .research-projects {
+  display: grid;
+  grid-template-columns: 1fr; /* force single column */
+  gap: 20px;                  /* spacing between rows */
+}
    
 
    
@@ -303,7 +308,7 @@ header.shrink .header-left .subtitle {
     </div>
 
     <h2 class="section-title">Research & Academic Work</h2>
-    <div class="project-grid">
+    <div class="project-grid research-projects">
       <div class="project-card">
         <h3> Electricity Consumption and Pricing Prediction Using Machine Learning</h3>
         <p> eveloped forecasting models using <strong>ARIMA</strong>, <strong>Random Forest</strong>, <strong>Gradient Boosting</strong>, and <strong>LSTM</strong> to predict electricity demand and pricing. Incorporated weather and consumption patterns as features, compared model performance, and highlighted key factors influencing energy usage and pricing trends. </p>
@@ -315,9 +320,8 @@ header.shrink .header-left .subtitle {
       <p>Investigated bias in pre-trained <strong>transformer-based neural networks</strong> using the adversarial <strong>SQuAD</strong> dataset. Applied an <strong>ensemble-based self-debiasing framework</strong> using <strong>BERT (Bidirectional Encoder Representations from Transformers)</strong> to train biased and debiased models jointly, reducing reliance on lexical and question-type biases and improving F1 performance by ~1 point on modified adversarial examples.</p>
       <img src="images/question-types-img.png" alt="Debiasing Models">
       <a href="images/QuestionTypes_FP.pdf" target="_blank">View Paper</a>
-</div>
-
-    </div>
+      </div>
+ </div>
     
   </section>
 
