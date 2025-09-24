@@ -7,12 +7,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <style>
     body {
-      font-family: "Inter", "Segoe UI", sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       line-height: 1.6;
-     background-color: #0d1117; /* Dark charcoal background */
-     color: #ffffff; /* Default text */
+      background: #fafafa;
+      color: #333;
     }
     .profile-photo {
        width: 150px;
@@ -26,8 +26,7 @@
 
 /* Header with shrink-on-scroll effect */
     header {
-      background-color: #161b22;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+      background-color: #0b5ed7;
       color: white;
       padding: 2rem;
       text-align: center;
@@ -62,8 +61,8 @@
       margin-top: 1rem;
       display: inline-block;
       padding: 10px 20px;
-       background-color: #58a6ff;
-       color: #0d1117;
+      background-color: white;
+      color: #0b5ed7;
       border: 2px solid white;
       border-radius: 9999px;
       font-weight: bold;
@@ -71,8 +70,6 @@
       transition: all 0.3s ease;
     }
     header.shrink {
-      background-color: #0d1117;
-  box-shadow: 0 2px 12px rgba(88, 166, 255, 0.2);
   padding: 0.5rem 1rem;
 }
 
@@ -100,32 +97,11 @@ header.shrink .header-left .subtitle {
     header.shrink .download-btn {
     border-radius: 9999px; /* pill-shaped */
     padding: 5px 16px;
-    /*margin-bottom: 10px;*/
+    margin-bottom: 10px;
     font-size: 0.85rem;
-    vertical-align: middle;
+    justify-content: center;
   }
-    .download-btn:hover {
-  background-color: #1f6feb;
-  box-shadow: 0 0 10px rgba(88, 166, 255, 0.4);
-}
-   h1, h2, h3, h4 {
-  color: #ffffff;
-  margin-top: 0;
-}
 
-p {
-  color: #c9d1d9;
-}
-a {
-  color: #58a6ff;
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-
-a:hover {
-  color: #1f6feb;
-  text-shadow: 0 0 6px rgba(88, 166, 255, 0.6);
-}
 
     h1 {
       margin: 0;
@@ -163,9 +139,9 @@ a:hover {
       margin-bottom: 30px;
     }
     .project-card {
-  background-color: #161b22;
+  background: #fff;
   border-radius: 12px;
-  box-shadow: 0 0 16px rgba(88, 166, 255, 0.08);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
   padding: 15px;
   display: flex;
   flex-direction: column;
@@ -183,7 +159,6 @@ a:hover {
   font-size: 0.95rem;
   color: #555;
 }
-    
 
   .project-card img {
   width: 100%;
@@ -209,7 +184,7 @@ a:hover {
 
     .project-card:hover {
       transform: translateY(-5px);
-       box-shadow: 0 0 24px rgba(88, 166, 255, 0.2);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
       transition: all 0.3s ease;
     }
 
@@ -245,12 +220,10 @@ a:hover {
     footer {
       text-align: center;
       padding: 15px;
-       background-color: #161b22;
-       color: #c9d1d9;
+      background: #f0f0f0;
       margin-top: 20px;
       font-size: 0.9rem;
-      border-top: 1px solid rgba(88, 166, 255, 0.1);
-   
+      color: #555;
     }
     .research-projects {
   display: grid;
