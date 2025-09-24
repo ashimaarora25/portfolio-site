@@ -36,9 +36,13 @@
       transition: all 0.3s ease;
     }
 
-    header.shrink {
-      padding: 0.75rem 1rem;
-    }
+   .header-content {
+  display: flex;
+  flex-direction: column; /* stacked initially */
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
 
     header h1 {
       margin: 0;
@@ -46,20 +50,7 @@
       transition: font-size 0.3s ease;
     }
 
-    header.shrink h1 {
-      font-size: 1.4rem;
-    }
-
-    header .subtitle {
-      margin-top: 0.5rem;
-      font-size: 1.2rem;
-      transition: all 0.3s ease;
-    }
-
-    header.shrink .subtitle {
-      display: none;
-    }
-
+   
     /* Header button */
     .download-btn {
       margin-top: 1rem;
@@ -68,17 +59,28 @@
       background-color: white;
       color: #0b5ed7;
       border: 2px solid white;
-      border-radius: 8px;
+      border-radius: 9999px;
       font-weight: bold;
       text-decoration: none;
       transition: all 0.3s ease;
     }
+    header.shrink {
+  padding: 0.5rem 1rem;
+}
+
+    header.shrink .header-content {
+  flex-direction: row; /* inline */
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 
     header.shrink .download-btn {
-      margin-top: 0;
-      padding: 8px 16px;
-      font-size: 0.9rem;
-    }
+    border-radius: 9999px; /* pill-shaped */
+    padding: 8px 22px;
+  }
 
 
     h1 {
@@ -208,13 +210,17 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>Ashima Arora</h1>
-    <p class="subtitle">Data Engineer | Transitioning into ML & MLOps</p>
-    <a href="downloads/AshimaAroraResume.pdf" download class="download-btn">
-    <i class="fa-solid fa-file-arrow-down"></i> Download Resume
-  </a>
-  </header>
+  <header id="mainHeader">
+  <div class="header-content">
+    <div class="header-left">
+      <h1>Ashima Arora</h1>
+      <p class="subtitle">Data Engineer | Transitioning into ML & MLOps</p>
+    </div>
+    <a href="downloads/AshimaAroraResume.pdf" class="download-btn" download>
+      <i class="fa-solid fa-file-arrow-down"></i> Download Resume
+    </a>
+  </div>
+</header>
 
     <section id="about">
     <h2 class = "about">About Me</h2>
@@ -299,13 +305,12 @@
     <p>&copy; 2025 Ashima Arora </p>
   </footer>
   <script>
-const header = document.querySelector("header");
-
-window.addEventListener("scroll", () => {
-  if(window.scrollY > 150) {
-    header.classList.add("shrink");
+const header = document.getElementById('mainHeader');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 150) {
+    header.classList.add('shrink');
   } else {
-    header.classList.remove("shrink");
+    header.classList.remove('shrink');
   }
 });
 </script>
