@@ -43,6 +43,11 @@
   justify-content: center;
   transition: all 0.3s ease;
 }
+    .header-left h1, 
+.header-left .subtitle {
+  text-align: center;
+  margin: 0;
+}
 
     header h1 {
       margin: 0;
@@ -74,12 +79,25 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  align-items: center;
+}
+    header.shrink .header-left {
+  display: flex;
+  flex-direction: row;
+  gap: 10px; /* space between name and subtitle */
+}
+
+header.shrink .header-left h1,
+header.shrink .header-left .subtitle {
+  margin: 0;
+  font-size: 1rem; /* optional: shrink text a bit */
 }
 
 
     header.shrink .download-btn {
     border-radius: 9999px; /* pill-shaped */
     padding: 8px 22px;
+      font-size: 0.95rem;
   }
 
 
