@@ -152,12 +152,34 @@ header {
       font-size: 0.9rem;
       color: #555;
     }
+    .download-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background-color: white;
+  color: #0b5ed7;
+  border: 2px solid white;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #0b5ed7;
+  color: white;
+  border-color: white;
+}
   </style>
 </head>
 <body>
   <header>
     <h1>Ashima Arora</h1>
     <p class="subtitle">Data Engineer | Transitioning into ML & MLOps</p>
+    <a href="downloads/AshimaAroraResume.pdf" download class="download-btn">
+    <i class="fa-solid fa-file-arrow-down"></i> Download Resume
+  </a>
   </header>
 
     <section id="about">
