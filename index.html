@@ -7,13 +7,31 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       line-height: 1.6;
-      background: #fafafa;
-      color: #333;
+      background-color: #f7f9fc; /* Soft light gray-blue background */
+      color: #1a1f36; /* Dark navy text for contrast */
+      font-family: "Inter", "Segoe UI", sans-serif;
     }
+    h1, h2, h3, h4 {
+  color: #0d1b2a;
+  margin-top: 0;
+}
+
+p {
+  color: #333b4f;
+}
+a {
+  color: #0059ff;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: #003ec7;
+  text-shadow: 0 0 4px rgba(0, 89, 255, 0.3);
+}
     .profile-photo {
        width: 150px;
       height: 150px;
@@ -26,7 +44,8 @@
 
 /* Header with shrink-on-scroll effect */
     header {
-      background-color: #0b5ed7;
+      background-color: #ffffff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
       color: white;
       padding: 2rem;
       text-align: center;
@@ -61,15 +80,21 @@
       margin-top: 1rem;
       display: inline-block;
       padding: 10px 20px;
-      background-color: white;
-      color: #0b5ed7;
+      background-color: #0059ff;
+      color: #ffffff;
       border: 2px solid white;
       border-radius: 9999px;
       font-weight: bold;
       text-decoration: none;
       transition: all 0.3s ease;
     }
+    .download-btn:hover {
+    background-color: #003ec7;
+    box-shadow: 0 0 10px rgba(0, 89, 255, 0.3);
+    }
     header.shrink {
+       background-color: #f7f9fc;
+  box-shadow: 0 2px 10px rgba(0, 89, 255, 0.08);
   padding: 0.5rem 1rem;
 }
 
@@ -97,9 +122,9 @@ header.shrink .header-left .subtitle {
     header.shrink .download-btn {
     border-radius: 9999px; /* pill-shaped */
     padding: 5px 16px;
-    margin-bottom: 10px;
-    font-size: 0.85rem;
-    justify-content: center;
+    /*margin-bottom: 10px;*/
+    font-size: 0.85rem; 
+    vertical-align: middle;
   }
 
 
@@ -139,9 +164,9 @@ header.shrink .header-left .subtitle {
       margin-bottom: 30px;
     }
     .project-card {
-  background: #fff;
+  background-color: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   padding: 15px;
   display: flex;
   flex-direction: column;
@@ -184,7 +209,7 @@ header.shrink .header-left .subtitle {
 
     .project-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+      box-shadow: 0 4px 20px rgba(0, 89, 255, 0.12);
       transition: all 0.3s ease;
     }
 
@@ -220,7 +245,8 @@ header.shrink .header-left .subtitle {
     footer {
       text-align: center;
       padding: 15px;
-      background: #f0f0f0;
+      background-color: #f7f9fc;
+      color: #333b4f;
       margin-top: 20px;
       font-size: 0.9rem;
       color: #555;
