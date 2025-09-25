@@ -326,13 +326,18 @@
     </div>
 
     <h2 class="section-title">Research & Academic Work</h2>
-    <div class="project-grid">
       <div class="project-card">
-        <h3> Electricity Consumption and Pricing Prediction Using Machine Learning</h3>
-        <p> eveloped forecasting models using <strong>ARIMA</strong>, <strong>Random Forest</strong>, <strong>Gradient Boosting</strong>, and <strong>LSTM</strong> to predict electricity demand and pricing. Incorporated weather and consumption patterns as features, compared model performance, and highlighted key factors influencing energy usage and pricing trends. </p>
-        <img src="images/electricty_pred.png" alt="Energy Forecasting">
-        <a href="images/Arora_Ashima_finalreport_electricity.pdf" target="_blank">View Paper</a>
-      </div>
+      <h3>Electricity Consumption and Pricing Prediction Using Machine Learning</h3>
+      <p>Conducted correlation analysis to identify key drivers of electricity demand and pricing, finding that 
+        <strong>generation metrics</strong> (oil, coal, fossil fuel output) had greater influence than weather features. 
+        Built and compared <strong>Random Forest</strong>, <strong>Gradient Boosting</strong>, <strong>RNN</strong>, and <strong>LSTM</strong> models against a 
+        <strong>Linear Regression</strong> baseline. 
+        For demand forecasting, <strong>Random Forest</strong> achieved the lowest RMSE of <strong>6.18</strong> (30% lower error vs. baseline), 
+        while <strong>LSTM</strong> achieved the lowest price prediction RMSE of <strong>3.93</strong> (69% lower error vs. baseline). 
+        Benchmarked results against <strong>ARIMA</strong>, confirming its superior performance for time-series forecasting in certain scenarios.</p>
+    <img src="images/electricty_pred.png" alt="Energy Forecasting">
+    <a href="images/Arora_Ashima_finalreport_electricity.pdf" target="_blank">View Paper</a>
+</div>
       <div class="project-card">
       <h3>Bias Mitigation in Reading Comprehension with Neural Networks</h3>
       <p>Investigated bias in pre-trained <strong>transformer-based neural networks</strong> using the adversarial <strong>SQuAD</strong> dataset. Applied an <strong>ensemble-based self-debiasing framework</strong> using <strong>BERT (Bidirectional Encoder Representations from Transformers)</strong> to train biased and debiased models jointly, reducing reliance on lexical and question-type biases and improving F1 performance by ~1 point on modified adversarial examples.</p>
