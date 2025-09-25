@@ -5,46 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ashima Arora | Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  
-   <style>
-  :root {
-    --bg: #f5f7fa;         /* Light futuristic background */
-    --surface: #ffffff;    /* Card + header background */
-    --text: #2d2d2d;       /* Softer dark gray text */
-    --heading: #1f1f1f;    /* Slightly darker for headings */
-    --muted: #4b5563;      /* Secondary text color */
-    --primary: #7c3aed;    /* Futuristic purple */
-    --primary-dark: #5b21b6;
-    --border: #e5e7eb;
-  }
-
+ <style>
+  /* Global Styles */
   body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: var(--bg);
-    color: var(--text);
+    background-color: #0f0f1a; /* Dark navy background */
+    color: #e0e0e0; /* Light gray text */
     font-family: "Inter", "Segoe UI", sans-serif;
   }
 
   h1, h2, h3, h4 {
-    color: var(--heading);
+    color: #ffffff; /* Headings white */
     margin-top: 0;
   }
 
   p {
-    color: var(--text);
+    color: #d0d0d0; /* Soft gray paragraphs */
   }
 
   a {
-    color: var(--primary);
+    color: #00ffd5; /* Teal links */
     text-decoration: none;
     transition: all 0.2s ease;
   }
 
   a:hover {
-    color: var(--primary-dark);
-    text-shadow: 0 0 6px rgba(124, 58, 237, 0.3);
+    color: #00ffd5;
+    text-shadow: 0 0 6px rgba(0, 255, 213, 0.6);
   }
 
   .profile-photo {
@@ -54,13 +43,14 @@
     margin-right: 20px;
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    box-shadow: 0 0 12px rgba(0, 255, 213, 0.4);
   }
 
-  /* Header */
+  /* Header with shrink-on-scroll effect */
   header {
-    background-color: var(--surface);
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    background-color: #1a1a2e; /* Darker than body but blends */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    color: white;
     padding: 2rem;
     text-align: center;
     position: sticky;
@@ -77,7 +67,7 @@
     transition: all 0.3s ease;
   }
 
-  .header-left h1, 
+  .header-left h1,
   .header-left .subtitle {
     text-align: center;
     margin: 0;
@@ -89,33 +79,42 @@
     transition: font-size 0.3s ease;
   }
 
-  /* Download button */
+  p.subtitle {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    color: #a0f0e0;
+  }
+
+  /* Header button */
   .download-btn {
     margin-top: 1rem;
     display: inline-block;
     padding: 10px 20px;
-    background-color: var(--primary);
-    color: white;
+    background-color: #00ffd5; /* Teal accent */
+    color: #1a1a2e; /* Dark text on teal */
+    border: 2px solid #00ffd5;
     border-radius: 9999px;
     font-weight: bold;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease, box-shadow 0.3s ease;
   }
 
   .download-btn:hover {
-    background-color: var(--primary-dark);
-    box-shadow: 0 0 10px rgba(124, 58, 237, 0.3);
+    box-shadow: 0 0 12px rgba(0, 255, 213, 0.6);
+    background-color: #00e6c7;
   }
 
+  /* Shrink header on scroll */
   header.shrink {
-    background-color: var(--surface);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    background-color: #1a1a2e;
+    box-shadow: 0 2px 10px rgba(0, 255, 213, 0.2);
     padding: 0.5rem 1rem;
   }
 
   header.shrink .header-content {
     flex-direction: row;
     justify-content: space-between;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     align-items: center;
@@ -134,6 +133,7 @@
   }
 
   header.shrink .download-btn {
+    border-radius: 9999px;
     padding: 5px 16px;
     font-size: 0.85rem;
     vertical-align: middle;
@@ -149,8 +149,8 @@
     text-align: center;
     font-size: 1.8rem;
     margin: 40px 0 20px;
-    color: var(--heading);
-    border-bottom: 2px solid var(--border);
+    color: #ffffff;
+    border-bottom: 2px solid #00ffd5;
     display: inline-block;
     padding-bottom: 5px;
   }
@@ -163,9 +163,9 @@
   }
 
   .project-card {
-    background-color: var(--surface);
+    background-color: #1e1e38; /* Dark card background */
     border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 10px rgba(0, 255, 213, 0.1);
     padding: 15px;
     display: flex;
     flex-direction: column;
@@ -175,13 +175,13 @@
   .project-card h3 {
     margin: 0 0 10px;
     font-size: 1.2rem;
-    color: var(--heading);
+    color: #ffffff;
   }
 
   .project-card p {
     margin: 0 0 12px;
     font-size: 0.95rem;
-    color: var(--muted);
+    color: #d0d0d0;
   }
 
   .project-card img {
@@ -189,17 +189,19 @@
     max-height: 450px;
     border-radius: 8px;
     margin-bottom: 12px;
+    object-fit: cover;
   }
 
-  .project-card a {
+ .project-card a {
     margin-top: auto;
-    color: var(--primary);
+    text-decoration: none;
+    color: #00ffd5;
     font-weight: bold;
   }
 
   .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 20px rgba(124, 58, 237, 0.12);
+    box-shadow: 0 4px 20px rgba(0, 255, 213, 0.3);
   }
 
   .project-card a:hover {
@@ -210,24 +212,41 @@
     text-align: center;
     margin-top: 40px;
     padding: 20px;
-    background: var(--surface);
-    border-top: 1px solid var(--border);
+    background-color: #1a1a2e;
+    border-top: 1px solid #33334d;
   }
 
-  footer {
+  #contact h2 {
+    margin-bottom: 15px;
+    color: #ffffff;
+  }
+.contact-icons a {
+    display: block;
+    margin: 10px 0;
+    color: #00ffd5;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+
+  .contact-icons i {
+    margin-right: 8px;
+  }
+footer {
     text-align: center;
     padding: 15px;
-    background-color: var(--bg);
-    color: var(--muted);
+    background-color: #1a1a2e;
+    color: #d0d0d0;
     margin-top: 20px;
     font-size: 0.9rem;
   }
 
+  /* Research Projects: single row per project */
   .research-projects {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
   }
+
 </style>
 
 
